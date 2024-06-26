@@ -12,10 +12,10 @@ import { NgClass } from '@angular/common';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss'],
   standalone: true,
-  imports: [MatTableModule, MatCheckboxModule,NgClass],
+  imports: [MatTableModule, MatCheckboxModule, NgClass],
 })
 export class TableComponent implements OnInit {
-  displayedColumns: string[] = ['select', 'name'];
+  displayedColumns: string[] = ['select', 'name', 'edit', 'delete'];
   dataSource = new MatTableDataSource<Todo>();
   selection = new SelectionModel<Todo>(true, []);
   status: boolean = true;
